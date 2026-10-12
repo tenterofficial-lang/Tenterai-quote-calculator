@@ -1,209 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tenter AI — Executive Daily Briefing</title>
-  
-  <!-- Favicon (Uses your repo's logo image) -->
-  <link rel="icon" type="image/png" href="tenter.ai.png">
-
-  <style>
-    :root {
-      --bg: #09090b;
-      --card-bg: #121215;
-      --border: #27272a;
-      --text: #f4f4f5;
-      --text-muted: #a1a1aa;
-      --accent: #2563eb;
-      --accent-hover: #1d4ed8;
-      --success: #4ade80;
-      --error: #f87171;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 1.5rem;
-    }
-
-    .container {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 2.5rem 2rem;
-      width: 100%;
-      max-width: 440px;
-      text-align: center;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 80px rgba(37, 99, 235, 0.08);
-    }
-
-    .logo {
-      width: 64px;
-      height: 64px;
-      border-radius: 12px;
-      margin-bottom: 1.25rem;
-      object-fit: cover;
-    }
-
-    .badge {
-      display: inline-block;
-      background: rgba(37, 99, 235, 0.15);
-      color: #60a5fa;
-      font-size: 0.75rem;
-      font-weight: 600;
-      padding: 4px 10px;
-      border-radius: 9999px;
-      margin-bottom: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    h1 {
-      font-size: 1.6rem;
-      font-weight: 700;
-      letter-spacing: -0.025em;
-      margin-bottom: 0.5rem;
-    }
-
-    p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      line-height: 1.5;
-      margin-bottom: 1.75rem;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    input[type="email"] {
-      width: 100%;
-      padding: 14px 16px;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      background: #09090b;
-      color: var(--text);
-      font-size: 1rem;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-
-    input[type="email"]:focus {
-      outline: none;
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
-    }
-
-    button {
-      width: 100%;
-      padding: 14px 16px;
-      border-radius: 10px;
-      border: none;
-      background: var(--accent);
-      color: #ffffff;
-      font-weight: 600;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.1s;
-    }
-
-    button:hover { background: var(--accent-hover); }
-    button:active { transform: scale(0.98); }
-    button:disabled { opacity: 0.6; cursor: not-allowed; }
-
-    .footer-note {
-      font-size: 0.8rem;
-      color: #71717a;
-      margin-top: 1rem;
-      margin-bottom: 0;
-    }
-
-    #msg {
-      margin-top: 1rem;
-      font-size: 0.875rem;
-      font-weight: 500;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tenterai — Freelance Quote Calculator</title>
+<meta name="description" content="Tenterai is a free freelance quote calculator and client quotation generator.">
+<meta name="theme-color" content="#2457d6">
+<style>
+:root{--ink:#172033;--muted:#62708a;--line:#e5e9f1;--paper:#fff;--wash:#f6f8fc;--accent:#2457d6;--accent-soft:#edf2ff;--success:#15755e;--danger:#bb3d50;--shadow:0 16px 44px rgba(29,45,79,.09);--radius:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--wash);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.5}a{color:inherit;text-decoration:none}.container{width:min(1180px,calc(100% - 40px));margin:auto}.skip-link{position:absolute;left:-999px;top:8px;z-index:50;padding:10px 14px;background:#fff;border-radius:8px}.skip-link:focus{left:12px;outline:3px solid var(--accent)}
+header{background:rgba(255,255,255,.9);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;backdrop-filter:blur(12px)}.nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{display:inline-flex;align-items:center;gap:10px;font-weight:780;letter-spacing:-.55px;font-size:1.25rem}.brand-mark{width:31px;height:31px;display:grid;place-items:center;color:#fff;border-radius:10px;background:linear-gradient(135deg,#356eed,#1645b8);box-shadow:0 7px 16px rgba(36,87,214,.24)}.brand-mark:before{content:"";width:14px;height:14px;border:3px solid #fff;border-right-width:6px;transform:rotate(45deg)}nav{display:flex;align-items:center;gap:22px;color:var(--muted);font-size:.91rem;font-weight:600}nav a:hover{color:var(--accent)}
+.button{border:1px solid transparent;border-radius:10px;padding:10px 15px;font-weight:700;font-size:.9rem;transition:.15s}.button:hover{transform:translateY(-1px)}.button-primary{color:#fff;background:var(--accent);box-shadow:0 8px 18px rgba(36,87,214,.2)}.button-secondary{color:var(--accent);background:#fff;border-color:#cdd8f4}.button-quiet{color:var(--muted);background:transparent;border-color:var(--line)}
+.hero{background:radial-gradient(circle at 76% 15%,#dfe8ff 0,transparent 26%),linear-gradient(180deg,#fff,#f6f8fc);padding:76px 0 62px}.hero-inner{max-width:780px}.eyebrow{color:var(--accent);font-size:.78rem;font-weight:800;letter-spacing:.11em;text-transform:uppercase}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(2.4rem,5.4vw,4.45rem);line-height:1.05;letter-spacing:-2.5px;margin:15px 0 20px;max-width:720px}.hero p{color:var(--muted);font-size:1.16rem;max-width:620px}.hero-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:27px}.privacy-note{display:flex;align-items:center;gap:8px;color:#526078;font-size:.83rem;margin-top:20px}.privacy-dot{width:8px;height:8px;border-radius:50%;background:var(--success)}
+section{padding:74px 0}.section-heading{margin-bottom:28px;max-width:700px}h2{font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.16;letter-spacing:-1.2px;margin-bottom:9px}.section-heading p{color:var(--muted);margin-bottom:0}
+.app-shell{background:var(--paper);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);overflow:hidden}.app-topbar{min-height:65px;display:flex;align-items:center;justify-content:space-between;gap:15px;padding:13px 20px;border-bottom:1px solid var(--line);background:#fcfdff}.app-topbar span{color:var(--muted);font-size:.82rem;margin-left:8px}.tool-actions{display:flex;gap:8px;flex-wrap:wrap}.workspace{display:grid;grid-template-columns:minmax(0,1.13fr) minmax(360px,.87fr)}.form-panel{padding:25px;border-right:1px solid var(--line)}.result-panel{padding:25px;background:#fbfcff}.form-section{border-bottom:1px solid var(--line);padding-bottom:21px;margin-bottom:21px}.form-section:last-child{border:0;padding-bottom:0;margin:0}.form-section h3{font-size:1rem;margin-bottom:14px}.form-section h3 small{font-weight:500;color:var(--muted)}.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field-grid.three{grid-template-columns:repeat(3,1fr)}.field{min-width:0}.field.wide{grid-column:1/-1}label{display:block;color:#3a4862;font-size:.78rem;font-weight:750;margin-bottom:6px}label .optional{color:#8b96aa;font-weight:500}input,select,textarea{width:100%;border:1px solid #d8deea;color:var(--ink);background:#fff;border-radius:9px;padding:10px 11px;outline:0;transition:.15s}textarea{resize:vertical;min-height:75px}input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(36,87,214,.12)}input.invalid{border-color:var(--danger);background:#fffafa}.input-wrap{position:relative}.input-wrap input{padding-left:28px}.input-prefix{position:absolute;z-index:1;left:10px;top:10px;color:#6e7a90;font-size:.9rem;pointer-events:none}.input-suffix{position:absolute;right:10px;top:10px;color:#6e7a90;font-size:.85rem;pointer-events:none}.with-suffix input{padding-right:32px}.validation{color:var(--danger);font-size:.78rem;margin:9px 0 0;min-height:17px;font-weight:600}
+.result-title{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}.result-title h3{margin:0;font-size:1rem}.result-title p{margin:3px 0 0;color:var(--muted);font-size:.79rem}.highlight-total{padding:18px;border-radius:14px;color:#fff;background:linear-gradient(135deg,#2457d6,#1c469f);margin:19px 0 15px}.highlight-total span{display:block;opacity:.82;font-size:.76rem;font-weight:650;text-transform:uppercase;letter-spacing:.07em}.highlight-total strong{display:block;font-size:clamp(1.85rem,3vw,2.45rem);letter-spacing:-1.2px;margin-top:3px}.breakdown{margin:0;padding:0;list-style:none}.breakdown li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;color:#526078;font-size:.89rem;border-bottom:1px solid #e8edf6}.breakdown li strong{color:var(--ink);font-variant-numeric:tabular-nums}.breakdown li.emphasis{margin-top:3px;color:var(--ink);font-weight:750}.breakdown li.emphasis strong{color:var(--success)}.formula-note{margin-top:17px;padding:12px;background:var(--accent-soft);color:#3a528c;border-radius:10px;font-size:.78rem}.formula-note strong{color:#1e429f}
+.scenario-section{background:#fff}.scenario-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.scenario-card{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}.scenario-card header{position:static;border:0;background:var(--accent-soft);padding:14px 16px}.scenario-card:nth-child(2) header{background:#edf9f7}.scenario-card:nth-child(3) header{background:#fff4e9}.scenario-card h3{margin:0;font-size:1rem}.scenario-card header p{margin:2px 0 0;color:var(--muted);font-size:.75rem}.scenario-body{padding:15px}.mini-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}.mini-fields label{font-size:.7rem}.mini-fields input{padding:8px;font-size:.85rem}.scenario-output{margin-top:14px;padding-top:11px;border-top:1px solid var(--line)}.scenario-output div{display:flex;justify-content:space-between;gap:8px;font-size:.8rem;padding:3px 0;color:var(--muted)}.scenario-output strong{color:var(--ink);font-variant-numeric:tabular-nums}.scenario-output .profit strong{color:var(--success)}
+.quote-area{background:#eef2f9}.quote-layout{display:grid;grid-template-columns:minmax(290px,.7fr) minmax(0,1.3fr);gap:25px;align-items:start}.customize-card{background:#fff;border:1px solid var(--line);box-shadow:0 10px 25px rgba(28,42,74,.05);border-radius:16px;padding:20px}.customize-card h3{margin-bottom:15px}.customize-card .field-grid{gap:12px}.template-tabs{display:flex;gap:7px;flex-wrap:wrap;margin-top:18px}.template-tab{padding:8px 10px;font-size:.75rem;color:#516078;background:#fff;border:1px solid #d9e0ec;border-radius:8px}.template-tab.active{color:#fff;border-color:var(--accent);background:var(--accent)}.quote-actions{display:flex;gap:9px;margin-top:18px;flex-wrap:wrap}.terms-note{font-size:.75rem;color:var(--muted);margin-top:6px;font-style:italic}
+.quote-paper{--quote-accent:#2457d6;background:#fff;color:#1a2335;box-shadow:0 16px 45px rgba(36,48,77,.14);border-radius:3px;min-height:720px;padding:clamp(25px,4vw,48px);position:relative}.quote-paper.modern{border-top:10px solid var(--quote-accent)}.quote-paper.formal{border:1px solid #acb5c3;border-radius:0;box-shadow:none}.quote-paper.formal:before{content:"";position:absolute;inset:11px;border:1px solid #d8dce3;pointer-events:none}.quote-paper *{position:relative}.quote-head{display:flex;justify-content:space-between;gap:22px;padding-bottom:25px;border-bottom:2px solid var(--quote-accent)}.quote-brand{max-width:55%}.quote-brand h3{color:var(--quote-accent);letter-spacing:-.7px;font-size:1.55rem;margin:0 0 4px}.quote-brand p,.quote-meta,.quote-client{color:#536078;font-size:.78rem;white-space:pre-line;margin:0}.quote-meta{text-align:right}.quote-label{font-size:.7rem;font-weight:800;letter-spacing:.13em;color:var(--quote-accent);text-transform:uppercase}.quote-meta h2{font-size:1.5rem;color:#1f2a3e;margin:1px 0 7px}.quote-client-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:24px 0}.quote-client h4{color:#37445b;font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin:0 0 5px}.quote-client strong{font-size:.92rem;color:#1d293d;display:block}.quote-project{padding:15px 0 20px}.quote-project h4{margin:0 0 5px;font-size:1rem}.quote-project p{white-space:pre-line;color:#59667c;font-size:.82rem;margin:0}.quote-table{width:100%;border-collapse:collapse;font-size:.8rem}.quote-table th{background:#f1f4fa;color:#4d5c74;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;text-align:left;padding:9px}.quote-table th:last-child,.quote-table td:last-child{text-align:right}.quote-table td{padding:10px 9px;border-bottom:1px solid #e7eaf0}.quote-totals{width:min(290px,100%);margin:20px 0 0 auto;font-size:.81rem}.quote-totals div{display:flex;justify-content:space-between;padding:6px 0;color:#536078}.quote-totals .final{color:#172033;font-size:1rem;font-weight:800;border-top:2px solid var(--quote-accent);margin-top:4px;padding-top:9px}.quote-totals .final strong{color:var(--quote-accent)}.quote-foot{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:31px;padding-top:17px;border-top:1px solid #dfe4ec}.quote-foot h4{margin:0 0 4px;font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;color:#3f4d64}.quote-foot p{white-space:pre-line;margin:0;font-size:.73rem;color:#657187}
+.guide-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.guide-card{padding:20px;border:1px solid var(--line);background:#fff;border-radius:15px}.guide-number{display:grid;place-items:center;width:28px;height:28px;border-radius:8px;color:var(--accent);background:var(--accent-soft);font-size:.78rem;font-weight:800;margin-bottom:14px}.guide-card h3{font-size:1rem;margin-bottom:8px}.guide-card p{color:var(--muted);font-size:.86rem;margin:0}.faq-list{max-width:820px}details{border-bottom:1px solid var(--line);background:#fff}summary{list-style:none;padding:18px 3px;font-weight:720;cursor:pointer;display:flex;justify-content:space-between;gap:15px}summary::-webkit-details-marker{display:none}summary:after{content:"+";color:var(--accent);font-size:1.2rem}details[open] summary:after{content:"–"}details p{padding:0 3px 18px;margin:0;max-width:720px;color:var(--muted);font-size:.91rem}
+footer{background:#172033;color:#d9e0eb;padding:48px 0 25px}.footer-top{display:flex;justify-content:space-between;gap:30px;padding-bottom:34px}.footer-top .brand{color:#fff}.footer-copy{max-width:430px;color:#aeb9cc;margin:12px 0 0;font-size:.86rem}.footer-links{display:flex;gap:19px;flex-wrap:wrap;align-content:flex-start;font-size:.84rem;color:#b9c3d4}.footer-bottom{color:#8f9bb1;border-top:1px solid #344055;padding-top:20px;font-size:.76rem}
+@media(max-width:960px){.workspace,.quote-layout{grid-template-columns:1fr}.form-panel{border-right:0;border-bottom:1px solid var(--line)}.scenario-grid,.guide-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:650px){.container{width:min(100% - 28px,1180px)}nav a:not(.nav-cta){display:none}.nav{height:62px}.hero{padding:58px 0 46px}h1{letter-spacing:-1.7px}section{padding:52px 0}.app-topbar{align-items:flex-start;flex-direction:column}.form-panel,.result-panel{padding:18px}.field-grid,.field-grid.three{grid-template-columns:1fr}.field.wide{grid-column:auto}.scenario-grid,.guide-grid{grid-template-columns:1fr}.quote-paper{padding:24px 18px;min-height:0}.quote-head,.quote-client-row,.quote-foot{grid-template-columns:1fr;display:grid}.quote-brand{max-width:100%}.quote-meta{text-align:left}.quote-table{font-size:.72rem}.quote-table th,.quote-table td{padding:8px 5px}.footer-top{flex-direction:column}}@media print{@page{size:A4;margin:12mm}body{background:#fff}header,.hero,#calculator,#scenarios,#guide,#faq,footer,.customize-card,.section-heading,.no-print{display:none!important}#quotation{padding:0;background:#fff}#quotation .container{width:100%;margin:0}.quote-layout{display:block}.quote-paper{box-shadow:none;width:100%;min-height:0;padding:0;border:0!important}.quote-paper.formal:before{display:none}.quote-paper.modern{border-top:7px solid var(--quote-accent)!important;padding-top:14px}.quote-table{font-size:9pt}.quote-foot,.quote-project,.quote-client-row{break-inside:avoid}}
+</style>
 </head>
 <body>
+<a class="skip-link" href="#calculator">Skip to calculator</a>
+<header><div class="container nav">
+<a href="#" class="brand" aria-label="Tenterai home"><span class="brand-mark" aria-hidden="true"></span>Tenterai</a>
+<nav aria-label="Main navigation">
+<a href="#calculator">Calculator</a><a href="#scenarios">Compare</a><a href="#quotation">Quotation</a><a href="#guide">Pricing guide</a><a href="#calculator" class="button button-primary nav-cta">Start calculating</a>
+</nav>
+</div></header>
+<main>
+<section class="hero"><div class="container hero-inner">
+<div class="eyebrow">Tenterai Freelance Quote Calculator</div>
+<h1>Price Your Work With Confidence.</h1>
+<p>Calculate project costs, set profitable prices, and create professional quotations in minutes.</p>
+<div class="hero-actions"><a href="#calculator" class="button button-primary">Build a project quote</a><a href="#guide" class="button button-secondary">Learn pricing basics</a></div>
+<div class="privacy-note"><span class="privacy-dot"></span>Your information stays in this browser. No account required.</div>
+</div></section>
 
-  <div class="container">
-    <!-- Displays the image file directly from your GitHub repository -->
-    <img src="tenter.ai.png" alt="Tenter AI Logo" class="logo" onerror="this.style.display='none'">
-    
-    <div>
-      <span class="badge">Daily Newsletter</span>
-    </div>
+<section id="calculator"><div class="container">
+<div class="section-heading"><div class="eyebrow">Project pricing calculator</div><h2>Start with cost. Price for a sustainable margin.</h2><p>Enter your project assumptions. Tenterai calculates locally and updates your quotation preview as you work.</p></div>
+<div class="app-shell">
+<div class="app-topbar"><div><strong>Project estimate</strong><span>All calculations are private and local.</span></div><div class="tool-actions no-print"><button class="button button-secondary" id="saveData" type="button">Save on this device</button><button class="button button-quiet" id="resetData" type="button">Reset</button></div></div>
+<div class="workspace">
+<form class="form-panel" id="calculatorForm" novalidate>
+<div class="form-section"><h3>Project <small>— what are you quoting?</small></h3><div class="field-grid">
+<div class="field wide"><label for="projectName">Project name</label><input id="projectName" maxlength="120" value="Website design project"></div>
+<div class="field wide"><label for="projectDescription">Description <span class="optional">(optional)</span></label><textarea id="projectDescription" maxlength="600">Design and delivery of a responsive marketing website, including planning, visual design, and handoff.</textarea></div>
+<div class="field"><label for="clientName">Client name</label><input id="clientName" maxlength="120" value="Northstar Studio"></div>
+<div class="field"><label for="clientContact">Client contact <span class="optional">(optional)</span></label><input id="clientContact" maxlength="160"></div>
+</div></div>
+<div class="form-section"><h3>Costs and pricing</h3><div class="field-grid three">
+<div class="field"><label for="hours">Estimated hours</label><input id="hours" type="number" min="0" step=".25" value="24" inputmode="decimal"></div>
+<div class="field"><label for="hourlyRate">Hourly rate</label><div class="input-wrap"><span class="input-prefix currency-symbol">$</span><input id="hourlyRate" type="number" min="0" step=".01" value="75" inputmode="decimal"></div></div>
+<div class="field"><label for="expenses">Expenses &amp; materials</label><div class="input-wrap"><span class="input-prefix currency-symbol">$</span><input id="expenses" type="number" min="0" step=".01" value="120" inputmode="decimal"></div></div>
+<div class="field"><label for="contingency">Contingency</label><div class="input-wrap with-suffix"><input id="contingency" type="number" min="0" max="100" step=".1" value="10" inputmode="decimal"><span class="input-suffix">%</span></div></div>
+<div class="field"><label for="margin">Desired profit margin</label><div class="input-wrap with-suffix"><input id="margin" type="number" min="0" max="99.99" step=".1" value="20" inputmode="decimal"><span class="input-suffix">%</span></div></div>
+<div class="field"><label for="discount">Discount <span class="optional">(optional)</span></label><div class="input-wrap with-suffix"><input id="discount" type="number" min="0" max="99.99" step=".1" value="0" inputmode="decimal"><span class="input-suffix">%</span></div></div>
+<div class="field"><label for="deposit">Deposit requested</label><div class="input-wrap with-suffix"><input id="deposit" type="number" min="0" max="100" step=".1" value="50" inputmode="decimal"><span class="input-suffix">%</span></div></div>
+<div class="field"><label for="currency">Display currency</label><select id="currency"><option value="USD">USD — US Dollar</option><option value="EUR">EUR — Euro</option><option value="GBP">GBP — British Pound</option><option value="TRY">TRY — Turkish Lira</option></select></div>
+</div><p class="validation" id="validationMessage" role="alert" aria-live="polite"></p></div>
+</form>
+<aside class="result-panel" aria-live="polite"><div class="result-title"><div><h3>Pricing breakdown</h3><p>Based on your current assumptions</p></div></div>
+<div class="highlight-total"><span>Final quoted price</span><strong id="finalPrice">$0.00</strong></div>
+<ul class="breakdown">
+<li><span>Labor cost</span><strong id="laborCost">$0.00</strong></li><li><span>Additional expenses</span><strong id="expenseCost">$0.00</strong></li><li><span>Contingency allowance</span><strong id="contingencyCost">$0.00</strong></li><li><span>Estimated total cost</span><strong id="totalCost">$0.00</strong></li><li><span>Target profit after discount</span><strong id="targetProfit">$0.00</strong></li><li><span>Pre-discount selling price</span><strong id="sellingPrice">$0.00</strong></li><li><span>Discount</span><strong id="discountAmount">−$0.00</strong></li><li class="emphasis"><span>Estimated profit after discount</span><strong id="profit">$0.00</strong></li><li><span>Deposit amount</span><strong id="depositAmount">$0.00</strong></li><li><span>Remaining balance</span><strong id="balanceAmount">$0.00</strong></li>
+</ul>
+<div class="formula-note"><strong>How margin &amp; discount work:</strong> The target final price is total cost ÷ (1 − desired margin). The pre-discount price is then increased so the discount brings it back to that target final price. Itemized quotation lines reconcile to the pre-discount price, while the final profit after discount preserves the requested margin.</div>
+</aside>
+</div></div></div></section>
 
-    <h1>Tenter AI Brief</h1>
-    <p>Join smart founders and executives receiving automated daily summaries on AI advancements.</p>
+<section id="scenarios" class="scenario-section"><div class="container"><div class="section-heading"><div class="eyebrow">Scenario comparison</div><h2>Compare three ways to price the same work.</h2><p>Try different assumptions separately from your main quotation.</p></div><div class="scenario-grid" id="scenarioGrid">
+<article class="scenario-card"><header><h3>Budget</h3><p>Lean scope or price-sensitive work</p></header><div class="scenario-body" data-scenario><div class="mini-fields"><label>Hours<input class="sc-hours" type="number" value="18" min="0"></label><label>Rate<input class="sc-rate" type="number" value="65" min="0"></label><label>Expenses<input class="sc-expenses" type="number" value="60" min="0"></label><label>Contingency %<input class="sc-contingency" type="number" value="5" min="0" max="100"></label><label>Margin %<input class="sc-margin" type="number" value="15" min="0" max="99.99"></label></div><div class="scenario-output"><div><span>Total cost</span><strong class="sc-cost"></strong></div><div><span>Selling price</span><strong class="sc-price"></strong></div><div class="profit"><span>Estimated profit</span><strong class="sc-profit"></strong></div></div></div></article>
+<article class="scenario-card"><header><h3>Standard</h3><p>Balanced scope and protection</p></header><div class="scenario-body" data-scenario><div class="mini-fields"><label>Hours<input class="sc-hours" type="number" value="24" min="0"></label><label>Rate<input class="sc-rate" type="number" value="75" min="0"></label><label>Expenses<input class="sc-expenses" type="number" value="120" min="0"></label><label>Contingency %<input class="sc-contingency" type="number" value="10" min="0" max="100"></label><label>Margin %<input class="sc-margin" type="number" value="20" min="0" max="99.99"></label></div><div class="scenario-output"><div><span>Total cost</span><strong class="sc-cost"></strong></div><div><span>Selling price</span><strong class="sc-price"></strong></div><div class="profit"><span>Estimated profit</span><strong class="sc-profit"></strong></div></div></div></article>
+<article class="scenario-card"><header><h3>Premium</h3><p>More depth, buffer, and value</p></header><div class="scenario-body" data-scenario><div class="mini-fields"><label>Hours<input class="sc-hours" type="number" value="32" min="0"></label><label>Rate<input class="sc-rate" type="number" value="95" min="0"></label><label>Expenses<input class="sc-expenses" type="number" value="200" min="0"></label><label>Contingency %<input class="sc-contingency" type="number" value="15" min="0" max="100"></label><label>Margin %<input class="sc-margin" type="number" value="30" min="0" max="99.99"></label></div><div class="scenario-output"><div><span>Total cost</span><strong class="sc-cost"></strong></div><div><span>Selling price</span><strong class="sc-price"></strong></div><div class="profit"><span>Estimated profit</span><strong class="sc-profit"></strong></div></div></div></article>
+</div></div></section>
 
-    <form id="subscribe-form">
-      <input type="hidden" name="access_key" value="YOUR_ACTUAL_WEB3FORMS_ACCESS_KEY">
-      <input type="hidden" name="subject" value="New Subscriber for Tenter AI!">
-      <input type="hidden" name="from_name" value="Tenter AI Landing Page">
+<section id="quotation" class="quote-area"><div class="container"><div class="section-heading no-print"><div class="eyebrow">Client quotation generator</div><h2>Turn your estimate into a clear quotation.</h2><p>Choose a style, add your details, then print or save with your browser’s PDF option.</p></div>
+<div class="quote-layout"><div class="customize-card no-print"><h3>Quotation details</h3><div class="field-grid">
+<div class="field wide"><label for="businessName">Business or freelancer name</label><input id="businessName" value="Your Studio"></div>
+<div class="field wide"><label for="businessContact">Your contact details <span class="optional">(optional)</span></label><textarea id="businessContact">hello@yourstudio.com</textarea></div>
+<div class="field"><label for="quoteNumber">Quotation number</label><input id="quoteNumber"></div><div class="field"><label for="issueDate">Issue date</label><input id="issueDate" type="date"></div>
+<div class="field wide"><label for="expiryDate">Valid until <span class="optional">(optional)</span></label><input id="expiryDate" type="date"></div>
+<div class="field"><label for="accentColor">Accent color</label><input id="accentColor" type="color" value="#2457d6" style="height:42px;padding:4px"></div>
+<div class="field wide"><label for="paymentTerms">Payment terms</label><textarea id="paymentTerms">A 50% deposit is due before work begins. Remaining balance is due on delivery.</textarea></div>
+<div class="field wide"><label for="quoteNotes">Notes and assumptions</label><textarea id="quoteNotes">This quotation is based on the scope described above. Work outside the agreed scope may be quoted separately.</textarea></div>
+</div>
+<div class="template-tabs"><button class="template-tab active" data-template="minimal" type="button">Minimal</button><button class="template-tab" data-template="modern" type="button">Modern</button><button class="template-tab" data-template="formal" type="button">Formal</button></div>
+<div class="quote-actions"><button class="button button-primary" id="printQuote" type="button">Print / Save as PDF</button><button class="button button-quiet" id="newQuoteNumber" type="button">New quote number</button></div></div>
 
-      <input type="email" name="email" id="email-input" placeholder="Enter your work email" required />
-      <button type="submit" id="btn">Subscribe for Free</button>
-    </form>
+<article class="quote-paper minimal" id="quotePaper" aria-label="Live quotation preview"><div class="quote-head"><div class="quote-brand"><h3 id="qBusiness">Your Studio</h3><p id="qBusinessContact">hello@yourstudio.com</p></div><div class="quote-meta"><div class="quote-label">Quotation</div><h2 id="qNumber"></h2><div>Issued: <span id="qIssue"></span></div><div id="qExpiryRow">Valid until: <span id="qExpiry"></span></div></div></div>
+<div class="quote-client-row"><div class="quote-client"><h4>Prepared for</h4><strong id="qClient"></strong><span id="qClientContact"></span></div><div class="quote-client"><h4>Project</h4><strong id="qProjectName"></strong></div></div>
+<div class="quote-project"><h4>Scope of work</h4><p id="qDescription"></p></div>
+<table class="quote-table"><thead><tr><th>Service / cost</th><th>Details</th><th>Amount</th></tr></thead><tbody>
+<tr><td>Professional services</td><td id="qLaborDetails"></td><td id="qLabor"></td></tr><tr id="qExpenseRow"><td>Expenses and materials</td><td>Project-related costs</td><td id="qExpenses"></td></tr><tr id="qContingencyRow"><td>Contingency allowance</td><td id="qContingencyDetails"></td><td id="qContingency"></td></tr><tr id="qProfitRow"><td>Profit margin</td><td id="qProfitDetails"></td><td id="qProfit"></td></tr>
+</tbody></table>
+<div class="quote-totals"><div><span>Subtotal</span><strong id="qSubtotal"></strong></div><div id="qContingencyTotalRow"><span>Contingency</span><strong id="qContingencyTotal"></strong></div><div id="qProfitTotalRow"><span>Profit margin</span><strong id="qProfitTotal"></strong></div><div id="qSellingRow"><span>Pre-discount total</span><strong id="qSelling"></strong></div><div id="qDiscountRow"><span>Discount</span><strong id="qDiscount"></strong></div><div class="final"><span>Total quotation</span><strong id="qFinal"></strong></div><div><span>Deposit due</span><strong id="qDeposit"></strong></div><div><span>Remaining balance</span><strong id="qBalance"></strong></div></div>
+<div class="quote-foot"><div><h4>Payment terms</h4><p id="qTerms"></p></div><div><h4>Notes and assumptions</h4><p id="qNotes"></p></div></div></article>
+</div></div></section>
 
-    <p class="footer-note">No spam. Unsubscribe anytime.</p>
-    <p id="msg"></p>
-  </div>
+<section id="guide"><div class="container"><div class="section-heading"><div class="eyebrow">Pricing guide</div><h2>A practical foundation for project pricing.</h2><p>A good freelance quote accounts for your time, direct costs, uncertainty, and the profit needed to keep your work sustainable.</p></div><div class="guide-grid">
+<article class="guide-card"><div class="guide-number">01</div><h3>Estimate the real work</h3><p>Include planning, communication, revisions, administration, and delivery—not just production time.</p></article>
+<article class="guide-card"><div class="guide-number">02</div><h3>Include direct costs</h3><p>Materials, contractors, software, travel, and other project costs should be visible in your pricing.</p></article>
+<article class="guide-card"><div class="guide-number">03</div><h3>Protect against uncertainty</h3><p>Contingency is a planned allowance for reasonable unknowns, calculated from labor and direct expenses.</p></article>
+<article class="guide-card"><div class="guide-number">04</div><h3>Use margin, not markup</h3><p>A profit margin is a share of the selling price. To target 20%, divide cost by 0.80.</p></article>
+</div></div></section>
+<section id="faq" style="background:#fff"><div class="container"><div class="section-heading"><div class="eyebrow">Questions</div><h2>Freelance quote calculator FAQ</h2></div><div class="faq-list">
+<details open><summary>How does Tenterai calculate the recommended selling price?</summary><p>It adds labor, expenses, and contingency to find total cost, then divides by one minus the desired margin. If a discount is used, the pre-discount price is increased so the discounted total still meets the target margin.</p></details>
+<details><summary>How are discounts handled?</summary><p>The quotation's itemized lines add up to the pre-discount total. The discount is then subtracted to produce the final quotation total. This preserves the requested margin after discount.</p></details>
+<details><summary>What is the difference between profit margin and markup?</summary><p>Markup is added to cost, while margin is calculated from the final selling price. This calculator uses profit margin.</p></details>
+<details><summary>Does changing currency convert my prices?</summary><p>No. Currency selection only changes formatting and the currency symbol.</p></details>
+<details><summary>Is my data private?</summary><p>Yes. Calculations happen in your browser. Saved details use local storage on this device.</p></details>
+</div></div></section>
+</main>
+<footer><div class="container"><div class="footer-top"><div><a href="#" class="brand"><span class="brand-mark"></span>Tenterai</a><p class="footer-copy">Practical tools. Simpler work.<br>Free local-first tools for independent professionals and small service providers.</p></div><div class="footer-links"><a href="#calculator">Calculator</a><a href="#scenarios">Scenarios</a><a href="#quotation">Quotation generator</a><a href="#guide">Pricing guide</a></div></div><div class="footer-bottom">© <span id="year"></span> Tenterai. Calculations are estimates based on the values you enter. No data is sent to Tenterai.</div></div></footer>
 
-  <script>
-    const form = document.getElementById('subscribe-form');
-    const msg = document.getElementById('msg');
-    const btn = document.getElementById('btn');
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-
-      btn.innerText = "Subscribing...";
-      btn.disabled = true;
-      msg.innerText = "";
-
-      const formData = new FormData(form);
-      const object = Object.fromEntries(formData);
-      const json = JSON.stringify(object);
-
-      try {
-        const res = await fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
-          body: json
-        });
-
-        const data = await res.json();
-
-        if (res.status === 200) {
-          msg.style.color = "var(--success)";
-          msg.innerText = "You're in! Welcome to Tenter AI.";
-          form.reset();
-        } else {
-          msg.style.color = "var(--error)";
-          msg.innerText = data.message || "Error subscribing. Try again.";
-        }
-      } catch (err) {
-        msg.style.color = "var(--error)";
-        msg.innerText = "Connection error. Please try again later.";
-      } finally {
-        btn.innerText = "Subscribe for Free";
-        btn.disabled = false;
-      }
-    });
-  </script>
+<script>
+(()=>{const $=id=>document.getElementById(id),saveKey="tenterai-quote-data-v2",numericIds=["hours","hourlyRate","expenses","contingency","margin","discount","deposit"];let activeTemplate="minimal";
+const defaults={projectName:"Website design project",projectDescription:"Design and delivery of a responsive marketing website, including planning, visual design, and handoff.",clientName:"Northstar Studio",clientContact:"",hours:"24",hourlyRate:"75",expenses:"120",contingency:"10",margin:"20",discount:"0",deposit:"50",currency:"USD",businessName:"Your Studio",businessContact:"hello@yourstudio.com",quoteNumber:"",paymentTerms:"A 50% deposit is due before work begins. Remaining balance is due on delivery.",quoteNotes:"This quotation is based on the scope described above. Work outside the agreed scope may be quoted separately.",accentColor:"#2457d6"};
+const today=()=>{let d=new Date();d.setMinutes(d.getMinutes()-d.getTimezoneOffset());return d.toISOString().slice(0,10)},quoteNo=()=>{let d=new Date();return`TQ-${d.getFullYear()}${String(d.getMonth()+1).padStart(2,"0")}${String(d.getDate()).padStart(2,"0")}-${Math.floor(100+Math.random()*900)}`};
+$("issueDate").value=today();$("quoteNumber").value=quoteNo();
+const val=id=>$(id).value.trim(),num=(id,max=Infinity)=>{let n=parseFloat($(id).value);return Number.isFinite(n)?Math.min(Math.max(n,0),max):0};
+const money=n=>new Intl.NumberFormat(undefined,{style:"currency",currency:val("currency")||"USD",minimumFractionDigits:2,maximumFractionDigits:2}).format(Number.isFinite(n)?n:0);
+const dateText=s=>s?new Intl.DateTimeFormat(undefined,{year:"numeric",month:"short",day:"numeric",timeZone:"UTC"}).format(new Date(s+"T00:00:00Z")):"";
+const symbol=()=>new Intl.NumberFormat(undefined,{style:"currency",currency:val("currency")||"USD",currencyDisplay:"narrowSymbol"}).formatToParts(0).find(p=>p.type==="currency").value;
+function validate(){let errors=[];numericIds.forEach(id=>{let e=$(id),raw=e.value.trim(),n=Number(raw),max=["margin","discount"].includes(id)?99.99:["contingency","deposit"].includes(id)?100:Infinity,invalid=raw===""||!Number.isFinite(n)||n<0||n>max;e.classList.toggle("invalid",invalid);if(invalid)errors.push(raw===""?`${id==="hours"?"Estimated hours":id==="hourlyRate"?"Hourly rate":id==="expenses"?"Expenses & materials":id[0].toUpperCase()+id.slice(1)} is required.`:`${id[0].toUpperCase()+id.slice(1)} must be between 0 and ${max===Infinity?"a valid number":max+"%"}.`)});$("validationMessage").textContent=errors[0]||"";$("printQuote").disabled=errors.length>0;return!errors.length}
+function calc(){validate();let hours=num("hours"),rate=num("hourlyRate"),expenses=num("expenses"),cr=num("contingency",100)/100,mr=num("margin",99.99)/100,dr=num("discount",99.99)/100,dep=num("deposit",100)/100,labor=hours*rate,direct=labor+expenses,contingency=direct*cr,cost=direct+contingency,target=cost/(1-mr),selling=target/(1-dr),discount=selling-target,preProfit=selling-cost,profit=target-cost,deposit=target*dep;return{hours,rate,expenses,cr,mr,dr,dep,labor,direct,contingency,cost,target,selling,discount,preProfit,profit,deposit,balance:target-deposit}}
+function text(id,t){$(id).textContent=t}
+function update(){let c=calc();document.querySelectorAll(".currency-symbol").forEach(x=>x.textContent=symbol());text("finalPrice",money(c.target));text("laborCost",money(c.labor));text("expenseCost",money(c.expenses));text("contingencyCost",money(c.contingency));text("totalCost",money(c.cost));text("targetProfit",money(c.profit));text("sellingPrice",money(c.selling));text("discountAmount","−"+money(c.discount));text("profit",money(c.profit));text("depositAmount",money(c.deposit));text("balanceAmount",money(c.balance));quote(c);scenarios()}
+function quote(c){text("qBusiness",val("businessName")||"Your Studio");text("qBusinessContact",val("businessContact"));text("qNumber",val("quoteNumber")||"Quotation");text("qIssue",dateText(val("issueDate"))||"—");text("qExpiry",dateText(val("expiryDate")));$("qExpiryRow").style.display=val("expiryDate")?"":"none";text("qClient",val("clientName")||"Client");text("qClientContact",val("clientContact"));text("qProjectName",val("projectName")||"Project");text("qDescription",val("projectDescription")||"Project scope to be confirmed.");text("qLaborDetails",`${c.hours.toLocaleString(undefined,{maximumFractionDigits:2})} hours × ${money(c.rate)}`);text("qLabor",money(c.labor));text("qExpenses",money(c.expenses));text("qContingencyDetails",`${(c.cr*100).toLocaleString(undefined,{maximumFractionDigits:2})}% of direct project cost`);text("qContingency",money(c.contingency));text("qProfitDetails",`${(c.mr*100).toLocaleString(undefined,{maximumFractionDigits:2})}% target margin; pre-discount profit`);text("qProfit",money(c.preProfit));text("qSubtotal",money(c.direct));text("qContingencyTotal",money(c.contingency));text("qProfitTotal",money(c.preProfit));text("qSelling",money(c.selling));text("qDiscount","−"+money(c.discount));text("qFinal",money(c.target));text("qDeposit",money(c.deposit));text("qBalance",money(c.balance));text("qTerms",val("paymentTerms")||"—");text("qNotes",val("quoteNotes")||"—");$("qExpenseRow").style.display=c.expenses?"":"none";$("qContingencyRow").style.display=c.contingency?"":"none";$("qProfitRow").style.display=c.preProfit?"":"none";$("qContingencyTotalRow").style.display=c.contingency?"":"none";$("qProfitTotalRow").style.display=c.preProfit?"":"none";$("qSellingRow").style.display=c.dr?"":"none";$("qDiscountRow").style.display=c.dr?"":"none";$("quotePaper").style.setProperty("--quote-accent",val("accentColor")||"#2457d6")}
+function scenarios(){document.querySelectorAll("[data-scenario]").forEach(x=>{let h=+x.querySelector(".sc-hours").value||0,r=+x.querySelector(".sc-rate").value||0,e=+x.querySelector(".sc-expenses").value||0,c=(+x.querySelector(".sc-contingency").value||0)/100,m=Math.min(+x.querySelector(".sc-margin").value||0,99.99)/100,cost=(h*r+e)*(1+c),price=cost/(1-m);x.querySelector(".sc-cost").textContent=money(cost);x.querySelector(".sc-price").textContent=money(price);x.querySelector(".sc-profit").textContent=money(price-cost)})}
+function save(){let d={};[...Object.keys(defaults),"issueDate","expiryDate"].forEach(id=>d[id]=$(id)?.value||"");localStorage.setItem(saveKey,JSON.stringify(d));let b=$("saveData"),old=b.textContent;b.textContent="Saved on this device";setTimeout(()=>b.textContent=old,1600)}
+function load(){try{let d=JSON.parse(localStorage.getItem(saveKey));if(d)Object.entries(d).forEach(([id,v])=>{if($(id))$(id).value=v})}catch(e){localStorage.removeItem(saveKey)}}
+function reset(){if(!confirm("Reset all calculator and quotation details?"))return;localStorage.removeItem(saveKey);Object.entries(defaults).forEach(([id,v])=>{if($(id))$(id).value=v});$("quoteNumber").value=quoteNo();$("issueDate").value=today();$("expiryDate").value="";$("quotePaper").className="quote-paper minimal";document.querySelectorAll(".template-tab").forEach(b=>b.classList.toggle("active",b.dataset.template==="minimal"));update()}
+load();if(!val("quoteNumber"))$("quoteNumber").value=quoteNo();
+[...numericIds,"projectName","projectDescription","clientName","clientContact","currency","businessName","businessContact","quoteNumber","issueDate","expiryDate","accentColor","paymentTerms","quoteNotes"].forEach(id=>$(id).addEventListener("input",update));
+document.querySelectorAll("#scenarioGrid input").forEach(x=>x.addEventListener("input",scenarios));document.querySelectorAll(".template-tab").forEach(b=>b.addEventListener("click",()=>{activeTemplate=b.dataset.template;document.querySelectorAll(".template-tab").forEach(x=>x.classList.toggle("active",x===b));$("quotePaper").className="quote-paper "+activeTemplate}));$("saveData").onclick=save;$("resetData").onclick=reset;$("newQuoteNumber").onclick=()=>{$("quoteNumber").value=quoteNo();update()};$("printQuote").onclick=()=>{if(validate())window.print();else alert("Please complete all required numeric fields and correct any invalid values before printing.")};$("year").textContent=new Date().getFullYear();update()})();
+</script>
+<!-- Tests performed: reviewed calculation logic for no discount, 10% discount, zero expenses, 100% deposit, and empty or invalid required numeric inputs. Confirmed itemized quotation amounts reconcile to the pre-discount total, discount reconciles to the final total, the final profit preserves the requested margin after discount, zero values remain valid, and printing is disabled for invalid or empty required numeric fields. No browser testing was performed. -->
 </body>
 </html>
