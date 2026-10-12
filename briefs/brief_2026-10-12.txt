@@ -1,0 +1,19 @@
+DAILY EXECUTIVE NEWS BRIEF - 2026-10-12
+
+<h2>Global Security & Geopolitics</h2>
+<ul>
+  <li><strong>Russian Strikes Hit Ukrainian Power Facilities:</strong> Ukrainian President Volodymyr Zelensky reported that Russian forces targeted six energy sites shortly after a ceasefire proposal was announced by Donald Trump, signaling persistent instability in the region.</li>
+  <li><strong>Saudi Arabia Warns Houthis After Airport Strikes:</strong> A Saudi minister promised a firm response following Houthi attacks targeting regional airports, threatening renewed escalation in the Middle East.</li>
+</ul>
+
+<h2>Cybersecurity & Technology</h2>
+<ul>
+  <li><strong>Cyberattack Paralyzes French Supermarket Infrastructure:</strong> Major French grocery networks suffered widespread refrigeration shutdowns following an unprecedented cyber incident, raising critical concerns over physical supply chain vulnerabilities.</li>
+  <li><strong>GLM-Legal Advances Autonomous Legal Workflows:</strong> Developers introduced GLM-Legal, a specialized AI model designed to advance agentic intelligence, automated case analysis, and document processing for the legal sector.</li>
+  <li><strong>Historical Tech Insight on Early 3D Game Design:</strong> A newly resurfaced 2001 interview with developer Giles Goddard details the original hardware and software engineering feats behind the development of Super Mario 64.</li>
+</ul>
+
+<h2>Business & Corporate Governance</h2>
+<ul>
+  <li><strong>Investigation Exposes Abramovich Financial Misconduct:</strong> A BBC probe revealed that falsified records were utilized to shield Russian oligarch Roman Abramovich's offshore wealth and evade significant tax liabilities.</li>
+</ul>
